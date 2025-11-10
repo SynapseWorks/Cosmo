@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Page Not Found | Cosmo Corp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-green-700 text-white font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-black p-4 flex justify-between items-center text-yellow-400">
+    <h1 class="text-2xl font-black">
+      <a href="index.html" class="hover:underline">Cosmo Corp</a>
+    </h1>
+    <ul class="flex space-x-4 text-sm font-semibold">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="services.html" class="hover:underline">Services</a></li>
+      <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
+      <li><a href="contact.html" class="hover:underline">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Centered 404 Content -->
+  <main class="min-h-screen flex flex-col items-center justify-center text-center p-8">
+    
+    <!-- 404 Graphic -->
+    <img src="images/404.png" alt="Ladder next to a roof with water droplets" class="w-60 mb-8 opacity-90" />
+
+    <!-- Message -->
+    <h1 class="text-5xl font-extrabold text-yellow-400 mb-4">404</h1>
+    <p class="text-xl font-semibold mb-4">Looks like this page slipped off the roof.</p>
+    <p class="text-sm text-gray-100 mb-8">We couldn’t find the page you were looking for—but don’t worry, we’ve got your gutters covered.</p>
+
+    <!-- Back Home Button -->
+    <a href="index.html" class="bg-yellow-400 text-black font-bold px-6 py-2 rounded shadow hover:bg-yellow-300 transition">Return Home</a>
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-300 px-4 py-6 text-center mt-12">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+      <!-- Badge -->
+      <div class="w-16 h-16">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <rect x="10" y="10" width="180" height="180" rx="20" fill="#111827"/>
+          <text x="50%" y="45%" text-anchor="middle" fill="#FBBF24" font-size="18" font-weight="bold" font-family="sans-serif">PROUDLY</text>
+          <text x="50%" y="60%" text-anchor="middle" fill="#FBBF24" font-size="16" font-weight="bold" font-family="sans-serif">BLACK-OWNED</text>
+        </svg>
+      </div>
+      <!-- Text -->
+      <div class="text-sm text-gray-300">
+        <p>© 2025 Cosmo Corp</p>
+        <p>Kingston Roots. Ontario Strong.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

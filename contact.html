@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Cosmo Corp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-black p-4 flex justify-between items-center text-yellow-400">
+    <h1 class="text-2xl font-black">
+      <a href="index.html" class="hover:underline">Cosmo Corp</a>
+    </h1>
+    <ul class="flex space-x-4 text-sm font-semibold">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="services.html" class="hover:underline">Services</a></li>
+      <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
+      <li><a href="contact.html" class="underline">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="bg-green-700 text-white text-center py-16">
+    <h2 class="text-4xl font-extrabold mb-4">Get in Touch</h2>
+    <p class="text-lg">Need a quote or have a question? We’re here for you.</p>
+  </header>
+
+  <!-- Contact Form -->
+  <section class="py-12 px-4 max-w-2xl mx-auto">
+    <form action="#" method="POST" class="space-y-6">
+      <div>
+        <label for="name" class="block text-sm font-semibold text-gray-700">Name</label>
+        <input type="text" id="name" name="name" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-yellow-400 focus:border-yellow-400"/>
+      </div>
+      <div>
+        <label for="email" class="block text-sm font-semibold text-gray-700">Email</label>
+        <input type="email" id="email" name="email" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-yellow-400 focus:border-yellow-400"/>
+      </div>
+      <div>
+        <label for="phone" class="block text-sm font-semibold text-gray-700">Phone</label>
+        <input type="tel" id="phone" name="phone" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-yellow-400 focus:border-yellow-400"/>
+      </div>
+      <div>
+        <label for="service" class="block text-sm font-semibold text-gray-700">Service Needed</label>
+        <select id="service" name="service" required class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2">
+          <option value="">Select a service</option>
+          <option>Gutter Cleaning</option>
+          <option>Eavestrough Installation</option>
+          <option>Repairs & Maintenance</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div>
+        <label for="message" class="block text-sm font-semibold text-gray-700">Message</label>
+        <textarea id="message" name="message" rows="4" class="mt-1 block w-full border border-gray-300 rounded-md shadow-sm p-2 focus:ring-yellow-400 focus:border-yellow-400"></textarea>
+      </div>
+      <div>
+        <button type="submit" class="bg-yellow-400 text-black font-semibold px-6 py-2 rounded shadow hover:bg-yellow-300 transition">Send Message</button>
+      </div>
+    </form>
+  </section>
+
+  <!-- Contact Info / Map -->
+  <section class="bg-gray-100 py-8 text-center">
+    <p class="text-lg font-semibold mb-2">Or reach us directly:</p>
+    <p class="text-sm text-gray-700">Phone: <a href="tel:1234567890" class="underline text-yellow-500">123-456-7890</a></p>
+    <p class="text-sm text-gray-700">Email: <a href="mailto:info@cosmocorp.com" class="underline text-yellow-500">info@cosmocorp.com</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-300 px-4 py-6 text-center">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+      <!-- Badge -->
+      <div class="w-16 h-16">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <rect x="10" y="10" width="180" height="180" rx="20" fill="#111827"/>
+          <text x="50%" y="45%" text-anchor="middle" fill="#FBBF24" font-size="18" font-weight="bold" font-family="sans-serif">PROUDLY</text>
+          <text x="50%" y="60%" text-anchor="middle" fill="#FBBF24" font-size="16" font-weight="bold" font-family="sans-serif">BLACK-OWNED</text>
+        </svg>
+      </div>
+      <!-- Text -->
+      <div class="text-sm text-gray-300">
+        <p>© 2025 Cosmo Corp</p>
+        <p>Kingston Roots. Ontario Strong.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

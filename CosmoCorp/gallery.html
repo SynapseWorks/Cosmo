@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gallery | Cosmo Corp</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800 font-sans">
+
+  <!-- Navbar -->
+  <nav class="bg-black p-4 flex justify-between items-center text-yellow-400">
+    <h1 class="text-2xl font-black">
+      <a href="index.html" class="hover:underline">Cosmo Corp</a>
+    </h1>
+    <ul class="flex space-x-4 text-sm font-semibold">
+      <li><a href="index.html" class="hover:underline">Home</a></li>
+      <li><a href="services.html" class="hover:underline">Services</a></li>
+      <li><a href="gallery.html" class="underline">Gallery</a></li>
+      <li><a href="contact.html" class="hover:underline">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <header class="bg-green-700 text-white text-center py-16">
+    <h2 class="text-4xl font-extrabold mb-4">Before & After</h2>
+    <p class="text-lg">See the difference Cosmo Corp makes, one roof at a time.</p>
+  </header>
+
+  <!-- Gallery Grid -->
+  <section class="py-12 px-4 max-w-6xl mx-auto">
+    <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
+      
+      <!-- Placeholder Images -->
+      <div class="overflow-hidden rounded shadow">
+        <img src="images/gallery/photo1.jpg" alt="Before gutter cleaning" class="w-full h-auto hover:scale-105 transition-transform duration-300"/>
+      </div>
+
+      <div class="overflow-hidden rounded shadow">
+        <img src="images/gallery/photo2.jpg" alt="After eavestrough installation" class="w-full h-auto hover:scale-105 transition-transform duration-300"/>
+      </div>
+
+      <div class="overflow-hidden rounded shadow">
+        <img src="images/gallery/photo3.jpg" alt="Clean roofline" class="w-full h-auto hover:scale-105 transition-transform duration-300"/>
+      </div>
+
+      <div class="overflow-hidden rounded shadow">
+        <img src="images/gallery/photo4.jpg" alt="Before repairs" class="w-full h-auto hover:scale-105 transition-transform duration-300"/>
+      </div>
+
+      <div class="overflow-hidden rounded shadow">
+        <img src="images/gallery/photo5.jpg" alt="After repairs" class="w-full h-auto hover:scale-105 transition-transform duration-300"/>
+      </div>
+
+      <div class="overflow-hidden rounded shadow">
+        <img src="images/gallery/photo6.jpg" alt="Finished eavestrough" class="w-full h-auto hover:scale-105 transition-transform duration-300"/>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-yellow-400 py-10 text-center text-black">
+    <h3 class="text-2xl font-bold mb-2">Like what you see?</h3>
+    <p class="mb-4">Let us bring this level of care and detail to your home.</p>
+    <a href="contact.html" class="bg-black text-yellow-400 px-6 py-2 rounded shadow hover:bg-gray-800 font-semibold transition">Request a Quote</a>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-gray-300 px-4 py-6 text-center">
+    <div class="flex flex-col md:flex-row items-center justify-center gap-4">
+      <!-- Badge -->
+      <div class="w-16 h-16">
+        <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <rect x="10" y="10" width="180" height="180" rx="20" fill="#111827"/>
+          <text x="50%" y="45%" text-anchor="middle" fill="#FBBF24" font-size="18" font-weight="bold" font-family="sans-serif">PROUDLY</text>
+          <text x="50%" y="60%" text-anchor="middle" fill="#FBBF24" font-size="16" font-weight="bold" font-family="sans-serif">BLACK-OWNED</text>
+        </svg>
+      </div>
+      <!-- Text -->
+      <div class="text-sm text-gray-300">
+        <p>© 2025 Cosmo Corp</p>
+        <p>Kingston Roots. Ontario Strong.</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

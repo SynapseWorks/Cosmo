@@ -2,65 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Our Services | Cosmo Corp</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cosmo Corp | Our Services</title>
+  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-white text-gray-800 font-sans">
-
   <!-- Navbar -->
-  <nav class="bg-black p-4 flex justify-between items-center text-yellow-400">
+  <nav class="bg-black p-4 flex justify-between items-center text-blue-400">
     <h1 class="text-2xl font-black">
-      <a href="index.html" class="hover:underline">Cosmo Corp</a>
+      <a href="index.html" class="hover:underline text-white">Cosmo Corp</a>
     </h1>
     <ul class="flex space-x-4 text-sm font-semibold">
-      <li><a href="index.html" class="hover:underline">Home</a></li>
-      <li><a href="services.html" class="underline">Services</a></li>
-      <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
-      <li><a href="contact.html" class="hover:underline">Contact</a></li>
+      <li><a href="index.html" class="hover:underline text-blue-400">Home</a></li>
+      <li><a href="gutters.html" class="hover:underline text-blue-400">Gutters</a></li>
+      <li><a href="landscaping.html" class="hover:underline text-blue-400">Landscaping</a></li>
+      <li><a href="services.html" class="underline text-white">Services</a></li>
+      <li><a href="gallery.html" class="hover:underline text-blue-400">Gallery</a></li>
+      <li><a href="contact.html" class="hover:underline text-blue-400">Contact</a></li>
     </ul>
   </nav>
 
-  <!-- Page Header -->
-  <header class="bg-green-700 text-white text-center py-16">
-    <h2 class="text-4xl font-extrabold mb-4">Professional Gutter & Eaves Services</h2>
-    <p class="text-lg">Honest work. Clean results. Built on island roots and Ontario strength.</p>
+  <!-- Hero Section -->
+  <header class="bg-blue-700 text-white text-center py-16">
+    <h2 class="text-4xl font-extrabold mb-4">Our Services</h2>
+    <p class="text-lg mb-6 max-w-3xl mx-auto px-2">
+      At Cosmo Corp, we provide a full range of exterior services to keep your home and property beautiful and protected.
+    </p>
   </header>
 
-  <!-- Services Grid -->
-  <section class="py-12 px-4 max-w-5xl mx-auto grid md:grid-cols-3 gap-8">
-    
-    <!-- Service 1 -->
-    <div class="bg-gray-100 p-6 rounded shadow-sm text-center">
-      <img src="images/icons/gutter-cleaning.svg" alt="Gutter Cleaning Icon" class="w-16 h-16 mx-auto mb-4" />
-      <h3 class="text-xl font-bold mb-2">Gutter Cleaning</h3>
-      <p class="text-sm text-gray-700 mb-4">Thorough seasonal cleaning to keep your gutters flowing all year long.</p>
-      <a href="contact.html" class="text-yellow-500 font-semibold hover:underline">Book Now</a>
+  <!-- Service Cards -->
+  <section class="py-12 px-4 bg-gray-100">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
+      <!-- Gutter Card -->
+      <div class="bg-white rounded shadow p-6 flex flex-col">
+        <img src="https://images.unsplash.com/photo-1665442348932-6e16d72fe163?auto=format&fit=crop&w=600&q=80" alt="Gutter services" class="w-full h-48 object-cover rounded mb-4" />
+        <h3 class="text-2xl font-bold mb-2 text-blue-700">Gutter Services</h3>
+        <p class="text-gray-600 mb-4 flex-grow">
+          Seamless installations, leaf guards, repairs and cleaning to keep your gutters flowing freely year‑round.
+        </p>
+        <a href="gutters.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 transition">Learn More</a>
+      </div>
+      <!-- Landscaping Card -->
+      <div class="bg-white rounded shadow p-6 flex flex-col">
+        <img src="https://images.unsplash.com/photo-1734079692160-fcbe4be6ab96?auto=format&fit=crop&w=600&q=80" alt="Landscaping services" class="w-full h-48 object-cover rounded mb-4" />
+        <h3 class="text-2xl font-bold mb-2 text-blue-700">Contracting &amp; Landscaping</h3>
+        <p class="text-gray-600 mb-4 flex-grow">
+          Dump trailer rentals, land clearing, fencing, decks, junk removal, machine rental and cedar log sales — we handle it all.
+        </p>
+        <a href="landscaping.html" class="inline-block bg-blue-600 text-white px-4 py-2 rounded shadow hover:bg-blue-700 transition">Learn More</a>
+      </div>
     </div>
-
-    <!-- Service 2 -->
-    <div class="bg-gray-100 p-6 rounded shadow-sm text-center">
-      <img src="images/icons/eaves-install.svg" alt="Eavestrough Installation Icon" class="w-16 h-16 mx-auto mb-4" />
-      <h3 class="text-xl font-bold mb-2">Eavestrough Installation</h3>
-      <p class="text-sm text-gray-700 mb-4">Expert installation for new or replacement systems—done right the first time.</p>
-      <a href="contact.html" class="text-yellow-500 font-semibold hover:underline">Get a Quote</a>
-    </div>
-
-    <!-- Service 3 -->
-    <div class="bg-gray-100 p-6 rounded shadow-sm text-center">
-      <img src="images/icons/repair.svg" alt="Repairs Icon" class="w-16 h-16 mx-auto mb-4" />
-      <h3 class="text-xl font-bold mb-2">Repairs & Tune-ups</h3>
-      <p class="text-sm text-gray-700 mb-4">Fix leaks, sagging, or blockages fast.</p>
-      <a href="contact.html" class="text-yellow-500 font-semibold hover:underline">Fix My Eaves</a>
-    </div>
-
   </section>
 
   <!-- CTA Banner -->
-  <section class="bg-yellow-400 py-10 text-center text-black">
-    <h3 class="text-2xl font-bold mb-2">Need help fast?</h3>
-    <p class="mb-4">We’re just one call or click away. Let us take care of the mess so you don’t have to.</p>
-    <a href="contact.html" class="bg-black text-yellow-400 px-6 py-2 rounded shadow hover:bg-gray-800 font-semibold transition">Contact Us</a>
+  <section class="bg-blue-500 py-10 text-center text-white">
+    <h3 class="text-2xl font-bold mb-2">Not sure where to start?</h3>
+    <p class="mb-4">Reach out to us — we’ll help you choose the right service and provide a free estimate.</p>
+    <a href="contact.html" class="inline-block bg-black text-blue-400 px-6 py-2 rounded shadow hover:bg-gray-800 font-semibold transition">Get in Touch</a>
   </section>
 
   <!-- Footer -->
@@ -69,9 +68,9 @@
       <!-- Badge -->
       <div class="w-16 h-16">
         <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" fill="none">
-          <rect x="10" y="10" width="180" height="180" rx="20" fill="#111827"/>
-          <text x="50%" y="45%" text-anchor="middle" fill="#FBBF24" font-size="18" font-weight="bold" font-family="sans-serif">PROUDLY</text>
-          <text x="50%" y="60%" text-anchor="middle" fill="#FBBF24" font-size="16" font-weight="bold" font-family="sans-serif">BLACK-OWNED</text>
+          <rect x="10" y="10" width="180" height="180" rx="20" fill="#111827" />
+          <text x="50%" y="45%" text-anchor="middle" fill="#3B82F6" font-size="18" font-weight="bold" font-family="sans-serif">PROUDLY</text>
+          <text x="50%" y="60%" text-anchor="middle" fill="#3B82F6" font-size="16" font-weight="bold" font-family="sans-serif">BLACK‑OWNED</text>
         </svg>
       </div>
       <!-- Text -->
@@ -81,6 +80,5 @@
       </div>
     </div>
   </footer>
-
 </body>
 </html>

@@ -89,9 +89,25 @@
       </div>
     </div>
   </footer>
+<script>
+  // If Netlify Identity sends the user back with a token in the URL hash,
+  // forward them to /admin so the Decap/Identity UI can complete password set/reset.
+  (function () {
+    const hash = window.location.hash || "";
+    const hasIdentityToken =
+      hash.includes("invite_token=") ||
+      hash.includes("recovery_token=") ||
+      hash.includes("confirmation_token=");
+
+    if (hasIdentityToken) {
+      window.location.replace("/admin/" + hash);
+    }
+  })();
+</script>
 
 </body>
 </html>
+
 
 
 

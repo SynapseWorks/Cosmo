@@ -4,93 +4,165 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Cosmo Corp | Gallery</title>
-  <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-  <!-- Navbar -->
-  <nav class="bg-black p-4 flex justify-between items-center text-blue-400">
-    <h1 class="text-2xl font-black">
-      <a href="index.html" class="hover:underline text-white">Cosmo Corp</a>
-    </h1>
-    <ul class="flex space-x-4 text-sm font-semibold">
-      <li><a href="index.html" class="hover:underline text-blue-400">Home</a></li>
-      <li><a href="gutters.html" class="hover:underline text-blue-400">Gutters</a></li>
-      <li><a href="landscaping.html" class="hover:underline text-blue-400">Landscaping</a></li>
-      <li><a href="services.html" class="hover:underline text-blue-400">Services</a></li>
-      <li><a href="gallery.html" class="underline text-white">Gallery</a></li>
-      <li><a href="contact.html" class="hover:underline text-blue-400">Contact</a></li>
-    </ul>
+
+<body class="bg-white text-gray-800 font-sans overflow-x-hidden">
+
+  <!-- Navbar (Responsive) -->
+  <nav class="bg-black text-blue-400">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <h1 class="text-2xl font-black">
+          <a href="index.html" class="hover:underline text-white">Cosmo Corp</a>
+        </h1>
+
+        <!-- Desktop Nav -->
+        <ul class="hidden md:flex space-x-4 text-sm font-semibold">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="gutters.html" class="hover:underline">Gutters</a></li>
+          <li><a href="landscaping.html" class="hover:underline">Landscaping</a></li>
+          <li><a href="services.html" class="hover:underline">Services</a></li>
+          <li><a href="gallery.html" class="underline text-white">Gallery</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="navToggle"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded text-white hover:bg-white/10"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <ul class="flex flex-col space-y-3 text-sm font-semibold">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="gutters.html" class="hover:underline">Gutters</a></li>
+          <li><a href="landscaping.html" class="hover:underline">Landscaping</a></li>
+          <li><a href="services.html" class="hover:underline">Services</a></li>
+          <li><a href="gallery.html" class="text-white underline">Gallery</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="bg-blue-700 text-white text-center py-16">
-    <h2 class="text-4xl font-extrabold mb-4">Project Gallery</h2>
-    <p class="text-lg mb-6 max-w-3xl mx-auto px-2">See how our work transforms properties — from clogged gutters to clean lines and messy yards to manicured landscapes.</p>
+  <header class="bg-blue-700 text-white text-center py-10 md:py-16">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 px-4">Project Gallery</h2>
+    <p class="text-base md:text-lg mb-6 max-w-3xl mx-auto px-6">
+      See how our work transforms properties — from clogged gutters to clean lines and messy yards to manicured landscapes.
+    </p>
   </header>
 
   <!-- Gallery Grid -->
   <section class="py-12 px-4 bg-gray-100">
-    <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    <div class="max-w-6xl mx-auto">
+      <div id="gallery-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+    </div>
   </section>
 
   <!-- CTA Banner -->
-  <section class="bg-blue-500 py-10 text-center text-white">
+  <section class="bg-blue-500 py-10 text-center text-white px-4">
     <h3 class="text-2xl font-bold mb-2">Inspired by our projects?</h3>
-    <p class="mb-4">Let us bring the same quality craftsmanship to your home.</p>
-    <a href="contact.html" class="inline-block bg-black text-blue-400 px-6 py-2 rounded shadow hover:bg-gray-800 font-semibold transition">Book a Consultation</a>
+    <p class="mb-4 max-w-2xl mx-auto">Let us bring the same quality craftsmanship to your home.</p>
+    <a href="contact.html" class="inline-block bg-black text-blue-400 px-6 py-3 rounded shadow hover:bg-gray-800 font-semibold transition">
+      Book a Consultation
+    </a>
   </section>
 
   <!-- Footer -->
   <footer class="bg-black text-gray-300 px-4 py-6 text-center">
     <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-      <!-- Text -->
       <div class="text-sm text-gray-300">
         <p>© 2025 Cosmo Corp</p>
       </div>
     </div>
   </footer>
-  <script>
-  fetch('/data/gallery.json', { cache: "no-store" })
-    .then(r => r.json())
-    .then(data => {
-      const grid = document.getElementById('gallery-grid');
 
-      if (!data.images || data.images.length === 0) {
-        grid.innerHTML = `
-          <div class="col-span-full text-center text-gray-500">
-            No photos yet — check back soon!
+  <!-- Mobile Nav Toggle Script -->
+  <script>
+    (function () {
+      const btn = document.getElementById("navToggle");
+      const menu = document.getElementById("mobileMenu");
+      if (!btn || !menu) return;
+
+      btn.addEventListener("click", () => {
+        const isOpen = !menu.classList.contains("hidden");
+        menu.classList.toggle("hidden");
+        btn.setAttribute("aria-expanded", String(!isOpen));
+      });
+    })();
+  </script>
+
+  <!-- Gallery loader (handles Decap image formats + missing leading slash) -->
+  <script>
+    fetch('/data/gallery.json', { cache: "no-store" })
+      .then(r => r.json())
+      .then(data => {
+        const grid = document.getElementById('gallery-grid');
+        const images = (data && data.images) ? data.images : [];
+
+        const getSrc = (src) => {
+          if (!src) return "";
+          // Decap sometimes stores objects; accept common keys
+          if (typeof src === "object") src = src.path || src.url || src.src || "";
+          if (typeof src !== "string") return "";
+
+          // Normalize common forms
+          if (src.startsWith("assets/")) src = "/" + src;
+          if (src.startsWith("./")) src = src.slice(1);
+          if (!src.startsWith("/") && !src.startsWith("http")) src = "/" + src;
+
+          // Avoid mixed content on https
+          if (src.startsWith("http://")) src = src.replace("http://", "https://");
+
+          return src;
+        };
+
+        if (!images.length) {
+          grid.innerHTML = `
+            <div class="col-span-full text-center text-gray-500">
+              No photos yet — check back soon!
+            </div>
+          `;
+          return;
+        }
+
+        grid.innerHTML = images.map(img => {
+          const src = getSrc(img.src);
+          return `
+            <figure class="bg-white rounded-xl shadow-lg overflow-hidden">
+              ${src
+                ? `<img src="${src}" alt="${img.alt || ''}" class="w-full h-64 object-cover" loading="lazy">`
+                : `<div class="w-full h-64 bg-gray-200 flex items-center justify-center text-gray-500">Image missing</div>`
+              }
+              <figcaption class="p-4">
+                <p class="font-semibold text-gray-900">${img.alt || ''}</p>
+                ${img.caption ? `<p class="text-sm text-gray-600 mt-1">${img.caption}</p>` : ''}
+              </figcaption>
+            </figure>
+          `;
+        }).join('');
+      })
+      .catch(() => {
+        document.getElementById('gallery-grid').innerHTML = `
+          <div class="col-span-full text-center text-red-600">
+            Could not load gallery images.
           </div>
         `;
-        return;
-      }
-
-      grid.innerHTML = data.images.map(img => `
-        <figure class="bg-white rounded-xl shadow-lg overflow-hidden">
-          <img src="${img.src}" alt="${img.alt || ''}" class="w-full h-64 object-cover" loading="lazy">
-          <figcaption class="p-4">
-            <p class="font-semibold text-gray-900">${img.alt || ''}</p>
-            ${img.caption ? `<p class="text-sm text-gray-600 mt-1">${img.caption}</p>` : ''}
-          </figcaption>
-        </figure>
-      `).join('');
-    })
-    .catch(() => {
-      document.getElementById('gallery-grid').innerHTML = `
-        <div class="col-span-full text-center text-red-600">
-          Could not load gallery images.
-        </div>
-      `;
-    });
-</script>
+      });
+  </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-

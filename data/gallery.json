@@ -1,3 +1,8 @@
 {
-  "images": []
+  "images": [
+    {
+      "src": "https://github.com/SynapseWorks/Cosmo/blob/main/images/Contracting.jpg",
+      "alt": "contracting test"
+    }
+  ]
 }

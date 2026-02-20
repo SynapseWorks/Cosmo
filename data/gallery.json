@@ -1,9 +1,3 @@
 {
-  "images": [
-    {
-      "src": "/assets/uploads/cat.jpg",
-      "alt": "Cat",
-      "caption": "Cat Caption"
-    }
-  ]
+  "images": []
 }

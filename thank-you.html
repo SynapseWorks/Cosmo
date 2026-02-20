@@ -6,26 +6,61 @@
   <title>Cosmo Corp | Thank You</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-800 font-sans">
-  <!-- Navbar -->
-  <nav class="bg-black p-4 flex justify-between items-center text-blue-400">
-    <h1 class="text-2xl font-black">
-      <a href="index.html" class="hover:underline text-white">Cosmo Corp</a>
-    </h1>
-    <ul class="flex space-x-4 text-sm font-semibold">
-      <li><a href="index.html" class="hover:underline text-blue-400">Home</a></li>
-      <li><a href="gutters.html" class="hover:underline text-blue-400">Gutters</a></li>
-      <li><a href="landscaping.html" class="hover:underline text-blue-400">Landscaping</a></li>
-      <li><a href="services.html" class="hover:underline text-blue-400">Services</a></li>
-      <li><a href="gallery.html" class="hover:underline text-blue-400">Gallery</a></li>
-      <li><a href="contact.html" class="hover:underline text-blue-400">Contact</a></li>
-    </ul>
+
+<body class="bg-white text-gray-800 font-sans overflow-x-hidden">
+
+  <!-- Navbar (Responsive) -->
+  <nav class="bg-black text-blue-400">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <h1 class="text-2xl font-black">
+          <a href="index.html" class="hover:underline text-white">Cosmo Corp</a>
+        </h1>
+
+        <!-- Desktop Nav -->
+        <ul class="hidden md:flex space-x-4 text-sm font-semibold">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="gutters.html" class="hover:underline">Gutters</a></li>
+          <li><a href="landscaping.html" class="hover:underline">Landscaping</a></li>
+          <li><a href="services.html" class="hover:underline">Services</a></li>
+          <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="navToggle"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded text-white hover:bg-white/10"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <ul class="flex flex-col space-y-3 text-sm font-semibold">
+          <li><a href="index.html" class="hover:underline">Home</a></li>
+          <li><a href="gutters.html" class="hover:underline">Gutters</a></li>
+          <li><a href="landscaping.html" class="hover:underline">Landscaping</a></li>
+          <li><a href="services.html" class="hover:underline">Services</a></li>
+          <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- Hero -->
-  <header class="bg-blue-700 text-white text-center py-16">
-    <h2 class="text-4xl font-extrabold mb-4">Thanks — we got your message!</h2>
-    <p class="text-lg mb-2 max-w-3xl mx-auto px-2">
+  <header class="bg-blue-700 text-white text-center py-10 md:py-16">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 px-4">Thanks — we got your message!</h2>
+    <p class="text-base md:text-lg mb-2 max-w-3xl mx-auto px-6">
       We’ll review it and get back to you as soon as possible.
     </p>
   </header>
@@ -68,5 +103,21 @@
       </div>
     </div>
   </footer>
+
+  <!-- Mobile Nav Toggle Script -->
+  <script>
+    (function () {
+      const btn = document.getElementById("navToggle");
+      const menu = document.getElementById("mobileMenu");
+      if (!btn || !menu) return;
+
+      btn.addEventListener("click", () => {
+        const isOpen = !menu.classList.contains("hidden");
+        menu.classList.toggle("hidden");
+        btn.setAttribute("aria-expanded", String(!isOpen));
+      });
+    })();
+  </script>
+
 </body>
 </html>

@@ -8,29 +8,62 @@
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="bg-white text-gray-800 font-sans">
 
-  <!-- Navbar -->
-  <nav class="bg-black p-4 flex justify-between items-center text-blue-400">
-    <h1 class="text-2xl font-black">
-      <a href="index.html" class="hover:underline text-white">Cosmo Corp</a>
-    </h1>
-    <ul class="flex space-x-4 text-sm font-semibold">
-      <li><a href="index.html" class="underline text-white">Home</a></li>
-      <li><a href="gutters.html" class="hover:underline text-blue-400">Gutters</a></li>
-      <li><a href="landscaping.html" class="hover:underline text-blue-400">Landscaping</a></li>
-      <li><a href="gallery.html" class="hover:underline text-blue-400">Gallery</a></li>
-      <li><a href="contact.html" class="hover:underline text-blue-400">Contact</a></li>
-    </ul>
+<body class="bg-white text-gray-800 font-sans overflow-x-hidden">
+
+  <!-- Navbar (Responsive) -->
+  <nav class="bg-black text-blue-400">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="flex justify-between items-center py-4">
+        <h1 class="text-2xl font-black">
+          <a href="index.html" class="hover:underline text-white">Cosmo Corp</a>
+        </h1>
+
+        <!-- Desktop Nav -->
+        <ul class="hidden md:flex space-x-4 text-sm font-semibold">
+          <li><a href="index.html" class="underline text-white">Home</a></li>
+          <li><a href="gutters.html" class="hover:underline">Gutters</a></li>
+          <li><a href="landscaping.html" class="hover:underline">Landscaping</a></li>
+          <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="navToggle"
+          class="md:hidden inline-flex items-center justify-center p-2 rounded text-white hover:bg-white/10"
+          aria-label="Open menu"
+          aria-expanded="false"
+          aria-controls="mobileMenu"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none"
+               viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                  d="M4 6h16M4 12h16M4 18h16"/>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Nav -->
+      <div id="mobileMenu" class="md:hidden hidden pb-4">
+        <ul class="flex flex-col space-y-3 text-sm font-semibold">
+          <li><a href="index.html" class="text-white underline">Home</a></li>
+          <li><a href="gutters.html" class="hover:underline">Gutters</a></li>
+          <li><a href="landscaping.html" class="hover:underline">Landscaping</a></li>
+          <li><a href="gallery.html" class="hover:underline">Gallery</a></li>
+          <li><a href="contact.html" class="hover:underline">Contact</a></li>
+        </ul>
+      </div>
+    </div>
   </nav>
 
   <!-- Hero Section -->
-  <header class="bg-blue-700 text-white text-center py-16">
-    <h2 class="text-4xl font-extrabold mb-4">Welcome to Cosmo Corp</h2>
-    <p class="text-lg mb-6 max-w-2xl mx-auto">
+  <header class="bg-blue-700 text-white text-center py-10 md:py-16">
+    <h2 class="text-3xl md:text-4xl font-extrabold mb-4 px-4">Welcome to Cosmo Corp</h2>
+    <p class="text-base md:text-lg mb-6 max-w-2xl mx-auto px-6">
       Your trusted partner for professional gutter care and landscaping services in Ontario.
     </p>
-    <a href="#services-overview" class="bg-blue-500 text-white font-bold px-6 py-3 rounded shadow hover:bg-blue-600 transition">
+    <a href="#services-overview" class="inline-block bg-blue-500 text-white font-bold px-6 py-3 rounded shadow hover:bg-blue-600 transition">
       Explore Our Services
     </a>
   </header>
@@ -39,10 +72,12 @@
   <section id="services-overview" class="py-12 px-4 bg-gray-100">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-8">
       <!-- Gutter Card -->
-      <div class="bg-white rounded shadow p-6 text-center">
-        <img src="images/Gutters1.jpg"
-     alt="Gutter cleaning in progress"
-     class="w-full h-48 object-cover object-[center_30%] rounded mb-4" />
+      <div class="bg-white rounded-xl shadow p-6 text-center">
+        <img
+          src="images/Gutters1.jpg"
+          alt="Gutter cleaning in progress"
+          class="w-full h-48 object-cover object-[center_30%] rounded-lg mb-4"
+        />
         <h3 class="text-2xl font-bold mb-2 text-blue-700">Gutter Services</h3>
         <p class="text-gray-600 mb-4">
           Keep your home safe and dry with our expert gutter cleaning, installation, and repair services.
@@ -53,8 +88,12 @@
       </div>
 
       <!-- Landscaping Card -->
-      <div class="bg-white rounded shadow p-6 text-center">
-        <img src="images/Contracting.jpg" alt="Beautiful landscaped garden" class="w-full h-48 object-cover object-[center_30%] rounded mb-4" />
+      <div class="bg-white rounded-xl shadow p-6 text-center">
+        <img
+          src="images/Contracting.jpg"
+          alt="Beautiful landscaped garden"
+          class="w-full h-48 object-cover object-[center_30%] rounded-lg mb-4"
+        />
         <h3 class="text-2xl font-bold mb-2 text-blue-700">Landscaping Services</h3>
         <p class="text-gray-600 mb-4">
           Transform your outdoor space with lawn care, garden design, and maintenance services.
@@ -66,15 +105,13 @@
     </div>
   </section>
 
-
-
   <!-- CTA Banner -->
-  <section class="bg-blue-500 py-10 text-center text-white">
+  <section class="bg-blue-500 py-10 text-center text-white px-4">
     <h3 class="text-2xl font-bold mb-2">Ready to get started?</h3>
-    <p class="mb-4">
+    <p class="mb-4 max-w-2xl mx-auto">
       Let us take care of your gutters and outdoor spaces so you can enjoy peace of mind.
     </p>
-    <a href="contact.html" class="inline-block bg-black text-blue-400 px-6 py-2 rounded shadow hover:bg-gray-800 font-semibold transition">
+    <a href="contact.html" class="inline-block bg-black text-blue-400 px-6 py-3 rounded shadow hover:bg-gray-800 font-semibold transition">
       Request a Quote
     </a>
   </section>
@@ -82,50 +119,45 @@
   <!-- Footer -->
   <footer class="bg-black text-gray-300 px-4 py-6 text-center">
     <div class="flex flex-col md:flex-row items-center justify-center gap-4">
-      <!-- Badge -->
-      <!-- Text -->
       <div class="text-sm text-gray-300">
         <p>© 2025 Cosmo Corp</p>
       </div>
     </div>
   </footer>
-<script>
-  (function () {
-    // Only run on the homepage, never on /admin
-    if (window.location.pathname.startsWith("/admin")) return;
 
-    const hash = window.location.hash || "";
-    const hasIdentityToken =
-      hash.includes("invite_token=") ||
-      hash.includes("recovery_token=") ||
-      hash.includes("confirmation_token=");
+  <!-- Mobile Nav Toggle Script -->
+  <script>
+    (function () {
+      const btn = document.getElementById("navToggle");
+      const menu = document.getElementById("mobileMenu");
+      if (!btn || !menu) return;
 
-    if (hasIdentityToken) {
-      // Send token to /admin once
-      window.location.replace("/admin/" + hash);
-    }
-  })();
-</script>
+      btn.addEventListener("click", () => {
+        const isOpen = !menu.classList.contains("hidden");
+        menu.classList.toggle("hidden");
+        btn.setAttribute("aria-expanded", String(!isOpen));
+      });
+    })();
+  </script>
+
+  <!-- Identity token forward script (safer) -->
+  <script>
+    (function () {
+      // Only run on homepage (index), never on /admin
+      if (window.location.pathname.startsWith("/admin")) return;
+
+      const hash = window.location.hash || "";
+      const hasIdentityToken =
+        hash.includes("invite_token=") ||
+        hash.includes("recovery_token=") ||
+        hash.includes("confirmation_token=");
+
+      // Prevent any loop if we're already trying to go to admin
+      if (hasIdentityToken) {
+        window.location.replace("/admin/" + hash);
+      }
+    })();
+  </script>
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

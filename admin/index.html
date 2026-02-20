@@ -6,38 +6,7 @@
     <title>Cosmo Admin</title>
   </head>
   <body>
-    <!-- Netlify Identity widget -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-
-    <script>
-      // If we arrived from an invite/recovery link, force the Identity UI to open.
-      (function () {
-        const hash = window.location.hash || "";
-        const hasToken =
-          hash.includes("invite_token=") ||
-          hash.includes("recovery_token=") ||
-          hash.includes("confirmation_token=");
-
-        if (window.netlifyIdentity) {
-          window.netlifyIdentity.on("init", (user) => {
-            // If there's a token, open the modal so the user can set/reset password.
-            if (hasToken) window.netlifyIdentity.open();
-
-            // After login, keep them in /admin
-            window.netlifyIdentity.on("login", () => {
-              document.location.href = "/admin/";
-            });
-
-            // After logout, keep them in /admin
-            window.netlifyIdentity.on("logout", () => {
-              document.location.href = "/admin/";
-            });
-          });
-        }
-      })();
-    </script>
-
-    <!-- Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
   </body>
 </html>
